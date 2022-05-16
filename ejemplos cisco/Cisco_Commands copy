@@ -1,0 +1,41 @@
+enable
+config terminal
+
+#config mode
+
+hostname
+enable secret user
+enable password pasword
+line console 0
+password cisco
+login
+line vty 0 15
+password
+service password-encryption
+banner motd $XXXXXXX
+vlan #vlan
+name
+ . . . .  para asignar ptos a las Vlan
+ interface fastEthernet 0/22
+ description
+ switchport mode access vlan #numerodevlan
+ switchport mode trunk
+ switchport trunk allowed vlan #numeros de Vlan por comas 
+
+
+ no shut
+ wr or copy running-config start-up config
+
+ - --   routers
+interface g0/0/1
+description
+interface gigabitEthernet 0/0/1.6 subinterfaces
+description
+encapsultaion dot1Q 6 (numero de vlan para el ejemplo es 6)
+ip address la_ip la_mask
+no shutdown
+
+
+v- -- - - desde el enable
+sh ip int brief
+
